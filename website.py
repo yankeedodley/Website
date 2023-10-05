@@ -21,7 +21,7 @@ if st.checkbox("The blog."):
 topic = None
 topics = None
 topic = st.selectbox("Please select one topic to generate ideas on:",
-    ['Painting', 'Music' , 'Sculptures', 'Nonfiction', 'Fiction', 'Videos'])
+    ['Painting', 'Music' , 'Sculptures'])
 
 if st.button("Submit"):
     # Generate a list of unique random integers between 1 and 5
@@ -40,16 +40,6 @@ if st.button("Submit"):
 
     elif topic == "Sculptures":
         topics = ["Nature", "Humans", "Objects", "C", "D"]
-        for r in random_numbers:
-            st.write(topics[r - 1])
-        
-    elif topic == "Nonfiction":
-        topics = ["Living things", "How machines work", "The history of ___", "E", "F"]
-        for r in random_numbers:
-            st.write(topics[r - 1])
-
-    elif topic == "Fiction":
-        topics = ["Survival", "Adventure", "Sorry", "G", "H"]
         for r in random_numbers:
             st.write(topics[r - 1])
 
